@@ -1,0 +1,45 @@
+Command: /mnt/e/iverilog/bin/vvp.exe E:/fpga/apb-spi/build/regression/apb_depth4_cs2/tb_apb_spi_master.vvp +SEED=20261021
+Working directory: /mnt/e/fpga/apb-spi/build/regression/apb_depth4_cs2
+
+APB SPI regression FIFO_DEPTH=4 NUM_CS=2 SEED=20261021
+TEST reset, APB setup gating, continuous PSEL, access errors
+PASS access rules
+TEST FIFO full/empty and sticky IRQ masking/W1C
+PASS FIFO boundaries and IRQ
+TEST 4 modes x 2 bit orders x 3 clock dividers, external MISO
+PASS mode=0 lsb=0 divider=1 cs=0 bytes=3
+PASS mode=0 lsb=0 divider=2 cs=1 bytes=3
+PASS mode=0 lsb=0 divider=5 cs=0 bytes=3
+PASS mode=0 lsb=1 divider=1 cs=1 bytes=3
+PASS mode=0 lsb=1 divider=2 cs=0 bytes=3
+PASS mode=0 lsb=1 divider=5 cs=1 bytes=3
+PASS mode=1 lsb=0 divider=1 cs=1 bytes=3
+PASS mode=1 lsb=0 divider=2 cs=0 bytes=3
+PASS mode=1 lsb=0 divider=5 cs=1 bytes=3
+PASS mode=1 lsb=1 divider=1 cs=0 bytes=3
+PASS mode=1 lsb=1 divider=2 cs=1 bytes=3
+PASS mode=1 lsb=1 divider=5 cs=0 bytes=3
+PASS mode=2 lsb=0 divider=1 cs=0 bytes=3
+PASS mode=2 lsb=0 divider=2 cs=1 bytes=3
+PASS mode=2 lsb=0 divider=5 cs=0 bytes=3
+PASS mode=2 lsb=1 divider=1 cs=1 bytes=3
+PASS mode=2 lsb=1 divider=2 cs=0 bytes=3
+PASS mode=2 lsb=1 divider=5 cs=1 bytes=3
+PASS mode=3 lsb=0 divider=1 cs=1 bytes=3
+PASS mode=3 lsb=0 divider=2 cs=0 bytes=3
+PASS mode=3 lsb=0 divider=5 cs=1 bytes=3
+PASS mode=3 lsb=1 divider=1 cs=0 bytes=3
+PASS mode=3 lsb=1 divider=2 cs=1 bytes=3
+PASS mode=3 lsb=1 divider=5 cs=0 bytes=3
+TEST internal loopback, both phases and bit orders
+PASS loopback
+TEST streaming beyond FIFO depth, TX starvation, RX backpressure, CS hold
+PASS streaming bytes=15 depth=4
+TEST START preserves queued TX, prior RX, and sticky DONE
+PASS START preservation
+TEST simultaneous DONE event and APB W1C: hardware event wins
+PASS event/W1C collision
+TEST busy configuration rejection, ABORT, reset in flight, recovery
+PASS abort/reset recovery
+PASS ALL checks=11247 APB_accesses=2000 transactions=35 serial_bytes=97 seed=20261021
+E:/fpga/apb-spi/tb/tb_apb_spi_master.sv:627: $finish called at 64320000 (1ps)

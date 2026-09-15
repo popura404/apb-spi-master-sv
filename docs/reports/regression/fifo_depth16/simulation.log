@@ -1,0 +1,5 @@
+Command: /mnt/e/iverilog/bin/vvp.exe E:/fpga/apb-spi/build/regression/fifo_depth16/tb_sync_fifo.vvp +SEED=20261020
+Working directory: /mnt/e/fpga/apb-spi/build/regression/fifo_depth16
+
+PASS tb_sync_fifo: DEPTH=16, 2037 operations
+E:/fpga/apb-spi/tb/tb_sync_fifo.sv:87: $finish called at 20411000 (1ps)

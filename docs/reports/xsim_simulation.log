@@ -1,0 +1,43 @@
+Time resolution is 1 ps
+APB SPI regression FIFO_DEPTH=16 NUM_CS=4 SEED=1
+TEST reset, APB setup gating, continuous PSEL, access errors
+PASS access rules
+TEST FIFO full/empty and sticky IRQ masking/W1C
+PASS FIFO boundaries and IRQ
+TEST 4 modes x 2 bit orders x 3 clock dividers, external MISO
+PASS mode=0 lsb=0 divider=1 cs=0 bytes=3
+PASS mode=0 lsb=0 divider=2 cs=1 bytes=3
+PASS mode=0 lsb=0 divider=5 cs=2 bytes=3
+PASS mode=0 lsb=1 divider=1 cs=1 bytes=3
+PASS mode=0 lsb=1 divider=2 cs=2 bytes=3
+PASS mode=0 lsb=1 divider=5 cs=3 bytes=3
+PASS mode=1 lsb=0 divider=1 cs=1 bytes=3
+PASS mode=1 lsb=0 divider=2 cs=2 bytes=3
+PASS mode=1 lsb=0 divider=5 cs=3 bytes=3
+PASS mode=1 lsb=1 divider=1 cs=2 bytes=3
+PASS mode=1 lsb=1 divider=2 cs=3 bytes=3
+PASS mode=1 lsb=1 divider=5 cs=0 bytes=3
+PASS mode=2 lsb=0 divider=1 cs=2 bytes=3
+PASS mode=2 lsb=0 divider=2 cs=3 bytes=3
+PASS mode=2 lsb=0 divider=5 cs=0 bytes=3
+PASS mode=2 lsb=1 divider=1 cs=3 bytes=3
+PASS mode=2 lsb=1 divider=2 cs=0 bytes=3
+PASS mode=2 lsb=1 divider=5 cs=1 bytes=3
+PASS mode=3 lsb=0 divider=1 cs=3 bytes=3
+PASS mode=3 lsb=0 divider=2 cs=0 bytes=3
+PASS mode=3 lsb=0 divider=5 cs=1 bytes=3
+PASS mode=3 lsb=1 divider=1 cs=0 bytes=3
+PASS mode=3 lsb=1 divider=2 cs=1 bytes=3
+PASS mode=3 lsb=1 divider=5 cs=2 bytes=3
+TEST internal loopback, both phases and bit orders
+PASS loopback
+TEST streaming beyond FIFO depth, TX starvation, RX backpressure, CS hold
+PASS streaming bytes=51 depth=16
+TEST START preserves queued TX, prior RX, and sticky DONE
+PASS START preservation
+TEST simultaneous DONE event and APB W1C: hardware event wins
+PASS event/W1C collision
+TEST busy configuration rejection, ABORT, reset in flight, recovery
+PASS abort/reset recovery
+PASS ALL checks=13566 APB_accesses=2197 transactions=35 serial_bytes=133 seed=1
+$finish called at time : 71930 ns : File "E:/fpga/apb-spi/tb/tb_apb_spi_master.sv" Line 627

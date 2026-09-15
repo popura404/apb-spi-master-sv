@@ -1,0 +1,8 @@
+Command: /mnt/e/iverilog/bin/iverilog.exe -g2012 -Wall -s tb_apb_spi_master -Ptb_apb_spi_master.FIFO_DEPTH=2 -Ptb_apb_spi_master.NUM_CS=1 -o E:/fpga/apb-spi/build/regression/apb_depth2_cs1/tb_apb_spi_master.vvp E:/fpga/apb-spi/rtl/apb_spi_master.sv E:/fpga/apb-spi/rtl/spi_shift.sv E:/fpga/apb-spi/rtl/sync_fifo.sv E:/fpga/apb-spi/tb/tb_apb_spi_corner.sv E:/fpga/apb-spi/tb/tb_apb_spi_master.sv E:/fpga/apb-spi/tb/tb_spi_shift.sv E:/fpga/apb-spi/tb/tb_sync_fifo.sv
+Working directory: /mnt/e/fpga/apb-spi/build/regression/apb_depth2_cs1
+
+E:/fpga/apb-spi/rtl/apb_spi_master.sv:91: sorry: constant selects in always_* processes are not currently supported (all bits will be included).
+E:/fpga/apb-spi/rtl/apb_spi_master.sv:91: sorry: constant selects in always_* processes are not currently supported (all bits will be included).
+E:/fpga/apb-spi/rtl/apb_spi_master.sv:91: sorry: constant selects in always_* processes are not currently supported (all bits will be included).
+E:/fpga/apb-spi/rtl/apb_spi_master.sv:91: sorry: constant selects in always_* processes are not currently supported (all bits will be included).
+E:/fpga/apb-spi/rtl/apb_spi_master.sv:91: sorry: constant selects in always_* processes are not currently supported (all bits will be included).

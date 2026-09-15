@@ -1,0 +1,11 @@
+Command: /mnt/e/iverilog/bin/vvp.exe E:/fpga/apb-spi/build/regression/apb_collisions/tb_apb_spi_corner.vvp +SEED=20261020
+Working directory: /mnt/e/fpga/apb-spi/build/regression/apb_collisions
+
+PASS corner: DONE takes priority over simultaneous W1C
+PASS corner: final ABORT collision phase 2
+PASS corner: final ABORT collision phase 3
+PASS corner: final ABORT collision phase 4
+PASS corner: full TX write rejected despite simultaneous hardware pop
+PASS corner: empty RX read rejected despite simultaneous hardware push
+PASS tb_apb_spi_corner: 6 verified collisions, 184 checks
+E:/fpga/apb-spi/tb/tb_apb_spi_corner.sv:184: $finish called at 4380000 (1ps)
